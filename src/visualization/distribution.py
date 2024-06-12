@@ -78,7 +78,7 @@ def main():
     malicious = []
 
     for period in PERIODS:
-        file = f"./data/descending-realistic/test/{period}.csv"
+        file = f"./data/descending_realistic/test/{period}.csv"
         data = pd.read_csv(file)
 
         number_of_benign = data.Malware.value_counts().get(0, 0)

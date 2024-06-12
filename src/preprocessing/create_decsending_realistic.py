@@ -1,26 +1,15 @@
-from sklearn.model_selection import train_test_split
 import pandas as pd
 from src.params import features, periods
+from src.utils.split_data import split_data
 
 READ_PATH = './data/periodized'
-WRITE_PATH = './data/descending-realistic'
+WRITE_PATH = './data/descending_realistic'
 
 PERIODS = periods.PERIODS
 FEATURES = features.PERMISSIONS + features.SYSTEMCALLS
 TEST_SIZE = 0.2
 
 PORTION_OF_NEW = 0.15
-
-def split_data(data, testsize):
-    X = data[FEATURES]
-    y = data.Malware
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=testsize)
-
-    X_train["Malware"] = y_train
-    X_test["Malware"] = y_test
-
-    return X_train, X_test
 
 
 def main():
