@@ -25,7 +25,7 @@ def main():
 
     data = pd.read_csv(file_read_path)
 
-    new_data_train, new_data_test = split_data(data, TEST_SIZE)
+    new_data_train, new_data_test = split_data(data, FEATURES, TEST_SIZE)
 
     number_of_old_samples = round((1 - PORTION_OF_NEW) * len(data_test))
 
