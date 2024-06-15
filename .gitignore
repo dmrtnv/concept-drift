@@ -1,7 +1,10 @@
 *.csv
 
+__pycache__
+
 pyvenv.cfg
 /include
 /Lib
 /Scripts
 /share
+/plots
