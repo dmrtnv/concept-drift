@@ -1,5 +1,7 @@
 *.csv
 
+__pycache__
+
 pyvenv.cfg
 /include
 /Lib

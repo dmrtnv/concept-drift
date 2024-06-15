@@ -1,4 +1,5 @@
 from sklearn.model_selection import train_test_split
+import pandas as pd
 
 def split_data(data, features, testsize):
   X = data[features]
@@ -9,4 +10,4 @@ def split_data(data, features, testsize):
   X_train["Malware"] = y_train
   X_test["Malware"] = y_test
 
-  return X_train, X_test
+  return pd.DataFrame(X_train), pd.DataFrame(X_test)
